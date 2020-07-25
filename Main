@@ -1,0 +1,26 @@
+import java.util.Scanner; 
+
+public class Main {
+  public static void main(String[] args){
+    Scanner scan = new Scanner(System.in);
+    int sum = 0;
+    int row = 6;
+    int col = 6;
+    while (row > 5 && col > 5 && row != col){
+       row = scan.nextInt();
+       col = scan.nextInt();
+       if (row > 5 || col > 5) System.out.println("Sorry Enter number smaller than 5");
+    }
+      
+      int[][] matrix = new int[row][col];
+      for(int r = 0; r < row; r++){
+        for(int c = 0; c < col; c++){
+          matrix[r][c] = scan.nextInt();
+          if(r == c)sum += matrix[r][c];
+        }
+      }
+      System.out.println(sum);
+      }
+  }
+ // break;
+
